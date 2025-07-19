@@ -1,0 +1,50 @@
+.card {
+  background: var(--ui-bg-subtle, #fff);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-elevation-card-rest, 0 1px 4px rgba(0,0,0,0.04));
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card:focus-within, .card:hover {
+  box-shadow: var(--shadow-elevation-card-hover, 0 4px 16px rgba(0,0,0,0.08));
+  transform: translateY(-2px) scale(1.01);
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background: #f3f3f3;
+  display: block;
+}
+
+.info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ui-fg-base, #222);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.price {
+  font-size: 1rem;
+  color: var(--ui-fg-subtle, #666);
+  font-weight: 400;
+}
+
+@media (min-width: 600px) {
+  .card {
+    min-width: 220px;
+  }
+} 

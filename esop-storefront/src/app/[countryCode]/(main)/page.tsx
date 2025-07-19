@@ -4,6 +4,7 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
+import ProductGallery from "../../../components/ProductGallery"
 
 export const metadata: Metadata = {
   title: "Medusa Next.js Starter Template",
@@ -35,6 +36,10 @@ export default async function Home(props: {
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
         </ul>
+      </div>
+      <div className="content-container py-16">
+        <h2 className="text-2xl-semi mb-8">Featured Products</h2>
+        <ProductGallery countryCode={countryCode} />
       </div>
     </>
   )
